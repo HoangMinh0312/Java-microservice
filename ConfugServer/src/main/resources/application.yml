@@ -1,0 +1,27 @@
+server:  
+  port: 8888
+    
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      server:
+        health:
+          enabled: false
+        monitor:
+          github:
+            enabled: true
+        git:
+          uri: https://github.com/HoangMinh0312/pluralsight-spring-cloudconfig-wa-tolls-perf.git
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG

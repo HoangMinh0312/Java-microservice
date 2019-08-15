@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:    name: s1-rates
+  profiles:    active:    - dev 
+management:  security:    enabled: false
